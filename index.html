@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO-list</title>
+      <!-- CSS only -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">      
+      <!-- JavaScript Bundle with Popper -->
+      <!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>-->
+</head>
+<body>
+    <div class="container">
+        <div class="row mb-3">
+            <div class="col">
+                <header>TODO-list</header>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p></p>
+            </div>
+        </div>
+
+        <form class="needs-validation" novalidate>
+            <div class="row g-3">                    
+                <div class="col-sm-4 form-floating">                        
+                    <input type="text" class="form-control border-secondary" value="" id="InputItemName" placeholder="Item name" required>
+                    <label for="InputItemName" class="form-label">Item name</label>
+                    <div class="invalid-feedback">Item name is required</div>                    
+                </div>                    
+                <div class="col-sm-3">
+                    <button class="btn btn-primary mt-2 mb-3" id="btnAdd">Lägg till</button>
+                </div>            
+                <div class="col-sm-5">
+                    <select name="select2" size="10" id="listItems" form="outer" multiple class="form-select border-secondary"></select>
+                    <button class="btn btn-primary mt-2 mb-2" id="btnRemove">Ta bort senast klickad på</button>
+                </div>
+            </div>
+        </form>
+
+        <form id="outer" novalidate>
+        </form>
+        
+        <div class="row">
+            <div class="col">
+                <footer>© 2022 Christian Rönnholm All Rights Reserved</footer>
+            </div>
+        </div>
+    </div>    
+    
+    <script src="todolist.js"></script>
+</body>
+</html>
