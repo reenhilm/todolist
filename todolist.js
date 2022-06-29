@@ -2,6 +2,7 @@ let btnAdd = document.querySelector('#btnAdd');
 let InputItemName = document.querySelector('#InputItemName');
 let listItems = document.querySelector('#listItems');
 let btnRemove = document.querySelector('#btnRemove');
+const checkedClassName = 'whenchecked';
 
 let addItemToList = function()
 {
@@ -27,17 +28,7 @@ listItems.addEventListener('mousedown', e => {
     e.preventDefault();
     listItems.selectedIndex = -1;
     e.target.selected = true;
-    console.log(window.getComputedStyle(e.target).backgroundColor);
-    if(window.getComputedStyle(e.target).backgroundColor === 'rgb(170, 170, 255)')
-    {
-        e.target.style.backgroundColor  = '#FFFFFF';
-        e.target.style.textDecoration = '';
-    }
-    else
-    {
-        e.target.style.backgroundColor  = '#AAAAFF';
-        e.target.style.textDecoration = 'line-through';
-    }
+    e.target.classList.toggle(checkedClassName);
 });
 
 InputItemName.addEventListener('focus', e => {
