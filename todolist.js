@@ -42,5 +42,8 @@ InputItemName.addEventListener('mouseup', e => {
 btnRemove.addEventListener('click', e => {
     e.preventDefault();
     if(listItems.selectedIndex !== -1)
-        listItems.remove(listItems.selectedIndex);
+    {
+        if(confirm(`Vill du verkligen ta bort: ${listItems[listItems.selectedIndex].value}?`))          
+            listItems.remove(listItems.selectedIndex);
+    }
 });
